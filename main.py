@@ -23,7 +23,7 @@ with mp_hands.Hands(
     min_tracking_confidence=0.7
 ) as hands:
     
-    while cap.isOpened():
+    while cap.isOpened():   
         success, frame = cap.read()
         if not success:
             print("Ignoring empty camera frame.")
@@ -48,8 +48,11 @@ with mp_hands.Hands(
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
         # Draw hand landmarks
+        finger_count = 0
+        mode_text = "Normal"
+
         if results.multi_hand_landmarks:
-            for hand_landmarks in results.multi_hand_landmarks:
+            for idx, hand_landmarks in enumerate(results.multi_hand_landmarks):
                 mp_drawing.draw_landmarks(
                     image,
                     hand_landmarks,
@@ -57,13 +60,77 @@ with mp_hands.Hands(
                     mp_drawing_styles.get_default_hand_landmarks_style(),
                     mp_drawing_styles.get_default_hand_connections_style()
                 )
-                
-                # Optional: Extract landmark positions
-                # for id, lm in enumerate(hand_landmarks.landmark):
-                #     h, w, c = image.shape
-                #     cx, cy = int(lm.x * w), int(lm.y * h)
-                #     print(f"Landmark {id}: ({cx}, {cy})")
+
+                # Determine handedness label for thumb logic
+                hand_label = None
+                if results.multi_handedness and len(results.multi_handedness) > idx:
+                    hand_label = results.multi_handedness[idx].classification[0].label
+
+                # Count fingers for this hand
+                lm = hand_landmarks.landmark
+                tips_ids = [4, 8, 12, 16, 20]
+                fingers = []
+
+                # Thumb
+                if hand_label:
+                    if hand_label == 'Right':
+                        fingers.append(1 if lm[4].x < lm[3].x else 0)
+                    else:
+                        fingers.append(1 if lm[4].x > lm[3].x else 0)
+                else:
+                    # Fallback: use relative x to detect thumb
+                    fingers.append(1 if lm[4].x < lm[3].x else 0)
+
+                # Other four fingers: compare tip to pip
+                for tip_id in tips_ids[1:]:
+                    if lm[tip_id].y < lm[tip_id - 2].y:
+                        fingers.append(1)
+                    else:
+                        fingers.append(0)
+
+                # Use finger count of first detected hand (ignore additional hands)
+                finger_count = sum(fingers)
+                break
         
+        # Apply color/hue changes according to finger_count
+        if finger_count == 1:
+            # Greyscale
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            image = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
+            mode_text = "Greyscale"
+        elif finger_count == 2:
+            # Purple tint (set hue to purple)
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            h, s, v = cv2.split(hsv)
+            h[:] = 140
+            hsv = cv2.merge([h, s, v])
+            image = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+            mode_text = "Purple"
+        elif finger_count == 3:
+            # Orange tint
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            h, s, v = cv2.split(hsv)
+            h[:] = 10
+            hsv = cv2.merge([h, s, v])
+            image = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+            mode_text = "Orange"
+        elif finger_count == 4:
+            # Yellow tint
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            h, s, v = cv2.split(hsv)
+            h[:] = 25
+            hsv = cv2.merge([h, s, v])
+            image = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+            mode_text = "Yellow"
+        else:
+            # Normal (no change) when 0 or 5+
+            mode_text = "Normal"
+
+        # Overlay current finger count and mode
+        cv2.rectangle(image, (0,0), (220,40), (0,0,0), -1)
+        cv2.putText(image, f'Fingers: {finger_count}', (10,20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255), 2)
+        cv2.putText(image, f'Mode: {mode_text}', (10,36), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 1)
+
         # Display the output frame
         cv2.imshow('Hand Gesture Recognition', image)
 
