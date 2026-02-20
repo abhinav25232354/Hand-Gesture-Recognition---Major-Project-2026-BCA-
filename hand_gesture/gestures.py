@@ -45,9 +45,9 @@ def extract_hand_info(hand_landmarks, hand_label: Optional[str]) -> HandInfo:
 
 
 def map_action(finger_state: FingerState) -> Optional[GestureAction]:
-    if finger_state == (0, 0, 0, 0, 0):
-        return GestureAction.CLOSE_CURRENT_APP
     if finger_state == (1, 1, 1, 1, 1):
+        return GestureAction.CLOSE_CURRENT_APP
+    if finger_state == (0, 0, 0, 0, 0):
         return GestureAction.SWITCH_WINDOW
     if finger_state == (0, 1, 1, 0, 0):
         return GestureAction.CLOSE_ALL_APPS
@@ -56,10 +56,9 @@ def map_action(finger_state: FingerState) -> Optional[GestureAction]:
 
 def action_label(action: Optional[GestureAction]) -> str:
     if action == GestureAction.CLOSE_CURRENT_APP:
-        return "Close Current App (Fist)"
+        return "Close Current App (Open Palm)"
     if action == GestureAction.SWITCH_WINDOW:
-        return "Switch Window (Open Palm)"
+        return "Switch Window (Fist)"
     if action == GestureAction.CLOSE_ALL_APPS:
         return "Close All Apps (V Sign)"
     return "None"
-

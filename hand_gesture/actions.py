@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import ctypes
+import os
 import platform
 import time
 from typing import Optional
@@ -19,10 +20,22 @@ class DesktopActionExecutor:
         self.close_all_step_delay_seconds = close_all_step_delay_seconds
         self.os_name = platform.system().lower()
         self.last_error: Optional[str] = None
+        self._self_pid = os.getpid()
+        self._last_external_hwnd: Optional[int] = None
 
         if pyautogui is not None:
             pyautogui.FAILSAFE = False
             pyautogui.PAUSE = 0.05
+
+    def refresh_external_target(self) -> None:
+        if self.os_name != "windows":
+            return
+        hwnd = _get_foreground_window()
+        if hwnd is None:
+            return
+        if _get_window_pid(hwnd) == self._self_pid:
+            return
+        self._last_external_hwnd = hwnd
 
     def execute(self, action: GestureAction) -> bool:
         self.last_error = None
@@ -46,7 +59,9 @@ class DesktopActionExecutor:
 
     def _close_current_app(self) -> None:
         if self.os_name == "windows":
-            _send_windows_hotkey("alt", "f4")
+            if not self._close_last_external_window():
+                self.last_error = "No external app selected. Focus the app you want to control first."
+                raise RuntimeError(self.last_error)
         elif self.os_name == "darwin":
             pyautogui.hotkey("command", "q")
         else:
@@ -54,7 +69,8 @@ class DesktopActionExecutor:
 
     def _switch_window(self) -> None:
         if self.os_name == "windows":
-            _send_windows_hotkey("alt", "tab")
+            if not self._focus_last_external_window():
+                _send_windows_hotkey("alt", "tab")
         elif self.os_name == "darwin":
             pyautogui.hotkey("command", "tab")
         else:
@@ -66,6 +82,29 @@ class DesktopActionExecutor:
             time.sleep(self.close_all_step_delay_seconds)
             self._switch_window()
             time.sleep(self.close_all_step_delay_seconds)
+            self.refresh_external_target()
+
+    def _focus_last_external_window(self) -> bool:
+        hwnd = self._last_external_hwnd
+        if self.os_name != "windows" or hwnd is None:
+            return False
+        if not _is_window_alive(hwnd):
+            self._last_external_hwnd = None
+            return False
+        return _focus_window(hwnd)
+
+    def _close_last_external_window(self) -> bool:
+        hwnd = self._last_external_hwnd
+        if self.os_name != "windows" or hwnd is None:
+            return False
+        if not _is_window_alive(hwnd):
+            self._last_external_hwnd = None
+            return False
+        if not _focus_window(hwnd):
+            return False
+        time.sleep(0.05)
+        _send_windows_hotkey("alt", "f4")
+        return True
 
 
 _WINDOWS_VK = {
@@ -74,6 +113,28 @@ _WINDOWS_VK = {
     "f4": 0x73,
 }
 _KEYEVENTF_KEYUP = 0x0002
+_SW_RESTORE = 9
+
+
+def _get_foreground_window() -> Optional[int]:
+    hwnd = ctypes.windll.user32.GetForegroundWindow()
+    return int(hwnd) if hwnd else None
+
+
+def _get_window_pid(hwnd: int) -> int:
+    pid = ctypes.c_ulong(0)
+    ctypes.windll.user32.GetWindowThreadProcessId(ctypes.c_void_p(hwnd), ctypes.byref(pid))
+    return int(pid.value)
+
+
+def _is_window_alive(hwnd: int) -> bool:
+    return bool(ctypes.windll.user32.IsWindow(ctypes.c_void_p(hwnd)))
+
+
+def _focus_window(hwnd: int) -> bool:
+    user32 = ctypes.windll.user32
+    user32.ShowWindow(ctypes.c_void_p(hwnd), _SW_RESTORE)
+    return bool(user32.SetForegroundWindow(ctypes.c_void_p(hwnd)))
 
 
 def _send_windows_hotkey(*keys: str) -> None:

@@ -13,8 +13,8 @@ This project uses OpenCV + MediaPipe Hands for real-time hand detection and gest
 
 ## Gesture Mapping
 
-- `Fist (0 fingers)` -> Close current app
-- `Open palm (5 fingers)` -> Switch window
+- `Open palm (5 fingers)` -> Close current app
+- `Fist (0 fingers)` -> Switch window
 - `V sign (index + middle)` -> Close multiple apps (best effort)
 
 Notes:

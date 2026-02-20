@@ -76,6 +76,7 @@ class GestureController:
                 print("Ignoring empty camera frame.")
                 continue
 
+            self.executor.refresh_external_target()
             image, hand_info = self.vision.process_frame(frame)
             finger_count = hand_info.finger_count if hand_info else 0
             action = map_action(hand_info.finger_state) if hand_info else None
@@ -105,4 +106,3 @@ class GestureController:
             self.cap.release()
         self.vision.close()
         cv2.destroyAllWindows()
-
