@@ -10,7 +10,8 @@ FingerState = Tuple[int, int, int, int, int]
 
 class GestureAction(str, Enum):
     CLOSE_CURRENT_APP = "close_current_app"
-    SWITCH_WINDOW = "switch_window"
+    OPEN_TASK_VIEW = "open_task_view"
+    SELECT_TASK_WINDOW = "select_task_window"
     CLOSE_ALL_APPS = "close_all_apps"
 
 
@@ -18,6 +19,7 @@ class GestureAction(str, Enum):
 class HandInfo:
     finger_state: FingerState
     finger_count: int
+    index_tip: Tuple[float, float]
 
 
 def _thumb_open(landmarks, hand_label: Optional[str]) -> int:
@@ -41,14 +43,20 @@ def extract_hand_info(hand_landmarks, hand_label: Optional[str]) -> HandInfo:
         _finger_open(lm, 16),
         _finger_open(lm, 20),
     )
-    return HandInfo(finger_state=state, finger_count=sum(state))
+    return HandInfo(
+        finger_state=state,
+        finger_count=sum(state),
+        index_tip=(lm[8].x, lm[8].y),
+    )
 
 
 def map_action(finger_state: FingerState) -> Optional[GestureAction]:
     if finger_state == (1, 1, 1, 1, 1):
         return GestureAction.CLOSE_CURRENT_APP
+    if finger_state == (0, 1, 0, 0, 0):
+        return GestureAction.OPEN_TASK_VIEW
     if finger_state == (0, 0, 0, 0, 0):
-        return GestureAction.SWITCH_WINDOW
+        return GestureAction.SELECT_TASK_WINDOW
     if finger_state == (0, 1, 1, 0, 0):
         return GestureAction.CLOSE_ALL_APPS
     return None
@@ -57,8 +65,10 @@ def map_action(finger_state: FingerState) -> Optional[GestureAction]:
 def action_label(action: Optional[GestureAction]) -> str:
     if action == GestureAction.CLOSE_CURRENT_APP:
         return "Close Current App (Open Palm)"
-    if action == GestureAction.SWITCH_WINDOW:
-        return "Switch Window (Fist)"
+    if action == GestureAction.OPEN_TASK_VIEW:
+        return "Open Task View (Index Finger)"
+    if action == GestureAction.SELECT_TASK_WINDOW:
+        return "Select Window (Fist)"
     if action == GestureAction.CLOSE_ALL_APPS:
         return "Close All Apps (V Sign)"
     return "None"

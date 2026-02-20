@@ -30,6 +30,8 @@ class GestureController:
         self.consecutive_count = 0
         self.last_action_time = 0.0
         self.status_text = "Ready"
+        self.last_index_tip: Optional[tuple[float, float]] = None
+        self.last_switch_nav_time = 0.0
 
     def _update_stability(self, action: Optional[GestureAction]) -> None:
         if action is None:
@@ -49,8 +51,15 @@ class GestureController:
         cooldown_elapsed = now - self.last_action_time
         if self.consecutive_count < self.config.consecutive_frames_required:
             return
-        if cooldown_elapsed < self.config.action_cooldown_seconds:
-            self.status_text = f"Cooldown {self.config.action_cooldown_seconds - cooldown_elapsed:.1f}s"
+        cooldown_required = self.config.action_cooldown_seconds
+        if (
+            self.candidate_action == GestureAction.SELECT_TASK_WINDOW
+            and self.executor.task_view_active
+        ):
+            cooldown_required = 0.0
+
+        if cooldown_elapsed < cooldown_required:
+            self.status_text = f"Cooldown {cooldown_required - cooldown_elapsed:.1f}s"
             return
 
         ok = self.executor.execute(self.candidate_action)
@@ -62,6 +71,45 @@ class GestureController:
 
         self.consecutive_count = 0
         self.candidate_action = None
+
+    def _handle_task_view_navigation(self, hand_info) -> None:
+        if not self.executor.task_view_active:
+            self.last_index_tip = None
+            return
+
+        if hand_info is None:
+            self.last_index_tip = None
+            return
+
+        if hand_info.finger_state != (0, 1, 0, 0, 0):
+            self.last_index_tip = None
+            return
+
+        current_tip = hand_info.index_tip
+        if self.last_index_tip is None:
+            self.last_index_tip = current_tip
+            return
+
+        now = time.time()
+        if now - self.last_switch_nav_time < self.config.switch_nav_cooldown_seconds:
+            self.last_index_tip = current_tip
+            return
+
+        dx = current_tip[0] - self.last_index_tip[0]
+        dy = current_tip[1] - self.last_index_tip[1]
+        threshold = self.config.switch_nav_min_delta
+        direction = None
+
+        if abs(dx) >= abs(dy) and abs(dx) >= threshold:
+            direction = "right" if dx > 0 else "left"
+        elif abs(dy) > abs(dx) and abs(dy) >= threshold:
+            direction = "down" if dy > 0 else "up"
+
+        if direction and self.executor.navigate_task_view(direction):
+            self.last_switch_nav_time = now
+            self.status_text = f"Task View move: {direction}"
+
+        self.last_index_tip = current_tip
 
     def run(self) -> None:
         if not self.cap.isOpened():
@@ -83,6 +131,7 @@ class GestureController:
 
             self._update_stability(action)
             self._try_execute_action()
+            self._handle_task_view_navigation(hand_info)
 
             image, mode_text = apply_visual_effect(image, finger_count)
             draw_overlay(

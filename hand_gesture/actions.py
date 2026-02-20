@@ -22,12 +22,15 @@ class DesktopActionExecutor:
         self.last_error: Optional[str] = None
         self._self_pid = os.getpid()
         self._last_external_hwnd: Optional[int] = None
+        self._task_view_active = False
 
         if pyautogui is not None:
             pyautogui.FAILSAFE = False
             pyautogui.PAUSE = 0.05
 
     def refresh_external_target(self) -> None:
+        if self._task_view_active:
+            return
         if self.os_name != "windows":
             return
         hwnd = _get_foreground_window()
@@ -46,8 +49,10 @@ class DesktopActionExecutor:
         try:
             if action == GestureAction.CLOSE_CURRENT_APP:
                 self._close_current_app()
-            elif action == GestureAction.SWITCH_WINDOW:
-                self._switch_window()
+            elif action == GestureAction.OPEN_TASK_VIEW:
+                self._open_task_view()
+            elif action == GestureAction.SELECT_TASK_WINDOW:
+                self._select_task_view_window()
             elif action == GestureAction.CLOSE_ALL_APPS:
                 self._close_all_apps()
             else:
@@ -84,6 +89,40 @@ class DesktopActionExecutor:
             time.sleep(self.close_all_step_delay_seconds)
             self.refresh_external_target()
 
+    @property
+    def task_view_active(self) -> bool:
+        return self._task_view_active
+
+    def _open_task_view(self) -> None:
+        if self.os_name == "windows":
+            if self._task_view_active:
+                return
+            _send_windows_hotkey("win", "tab")
+            self._task_view_active = True
+            return
+
+        # Fallback to existing switch behavior on non-Windows.
+        self._switch_window()
+
+    def navigate_task_view(self, direction: str) -> bool:
+        if self.os_name != "windows" or not self._task_view_active:
+            return False
+        direction = direction.lower()
+        if direction not in {"left", "right", "up", "down"}:
+            return False
+        _send_windows_hotkey(direction)
+        return True
+
+    def _select_task_view_window(self) -> None:
+        if self.os_name == "windows":
+            if not self._task_view_active:
+                self.last_error = "Task View is not active."
+                raise RuntimeError(self.last_error)
+            _send_windows_hotkey("enter")
+            self._task_view_active = False
+            return
+        self._switch_window()
+
     def _focus_last_external_window(self) -> bool:
         hwnd = self._last_external_hwnd
         if self.os_name != "windows" or hwnd is None:
@@ -108,9 +147,15 @@ class DesktopActionExecutor:
 
 
 _WINDOWS_VK = {
+    "win": 0x5B,
     "alt": 0x12,
     "tab": 0x09,
     "f4": 0x73,
+    "left": 0x25,
+    "up": 0x26,
+    "right": 0x27,
+    "down": 0x28,
+    "enter": 0x0D,
 }
 _KEYEVENTF_KEYUP = 0x0002
 _SW_RESTORE = 9
