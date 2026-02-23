@@ -11,5 +11,6 @@ class RuntimeConfig:
     action_cooldown_seconds: float = 2.0
     close_all_iterations: int = 7
     close_all_step_delay_seconds: float = 0.2
-    switch_nav_min_delta: float = 0.08
+    switch_nav_min_delta: float = 0.1
     switch_nav_cooldown_seconds: float = 0.2
+    switch_nav_frame_deadzone: float = 0.006

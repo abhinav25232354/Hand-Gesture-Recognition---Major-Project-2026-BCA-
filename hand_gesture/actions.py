@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import ctypes
+import logging
 import os
 import platform
 import time
@@ -12,6 +13,8 @@ try:
     import pyautogui
 except Exception:
     pyautogui = None
+
+logger = logging.getLogger(__name__)
 
 
 class DesktopActionExecutor:
@@ -39,11 +42,14 @@ class DesktopActionExecutor:
         if _get_window_pid(hwnd) == self._self_pid:
             return
         self._last_external_hwnd = hwnd
+        logger.debug("Updated external target window: hwnd=%s", hwnd)
 
     def execute(self, action: GestureAction) -> bool:
         self.last_error = None
+        logger.debug("Requested execute action: %s", action.value)
         if self.os_name != "windows" and pyautogui is None:
             self.last_error = "pyautogui not installed. Run: pip install pyautogui"
+            logger.error(self.last_error)
             return False
 
         try:
@@ -57,12 +63,15 @@ class DesktopActionExecutor:
                 self._close_all_apps()
             else:
                 return False
+            logger.debug("Action execution completed: %s", action.value)
             return True
         except Exception as ex:
             self.last_error = f"Action failed: {ex}"
+            logger.exception("Action execution raised exception: %s", action.value)
             return False
 
     def _close_current_app(self) -> None:
+        logger.debug("Closing current app.")
         if self.os_name == "windows":
             if not self._close_last_external_window():
                 self.last_error = "No external app selected. Focus the app you want to control first."
@@ -73,6 +82,7 @@ class DesktopActionExecutor:
             pyautogui.hotkey("alt", "f4")
 
     def _switch_window(self) -> None:
+        logger.debug("Switching window.")
         if self.os_name == "windows":
             if not self._focus_last_external_window():
                 _send_windows_hotkey("alt", "tab")
@@ -82,12 +92,14 @@ class DesktopActionExecutor:
             pyautogui.hotkey("alt", "tab")
 
     def _close_all_apps(self) -> None:
+        logger.info("Closing all apps sequence started: iterations=%d", self.close_all_iterations)
         for _ in range(self.close_all_iterations):
             self._close_current_app()
             time.sleep(self.close_all_step_delay_seconds)
             self._switch_window()
             time.sleep(self.close_all_step_delay_seconds)
             self.refresh_external_target()
+        logger.info("Closing all apps sequence finished.")
 
     @property
     def task_view_active(self) -> bool:
@@ -96,9 +108,11 @@ class DesktopActionExecutor:
     def _open_task_view(self) -> None:
         if self.os_name == "windows":
             if self._task_view_active:
+                logger.debug("Task View already active, skipping open.")
                 return
             _send_windows_hotkey("win", "tab")
             self._task_view_active = True
+            logger.info("Task View opened.")
             return
 
         # Fallback to existing switch behavior on non-Windows.
@@ -111,6 +125,7 @@ class DesktopActionExecutor:
         if direction not in {"left", "right", "up", "down"}:
             return False
         _send_windows_hotkey(direction)
+        logger.debug("Task View navigated: %s", direction)
         return True
 
     def _select_task_view_window(self) -> None:
@@ -120,6 +135,7 @@ class DesktopActionExecutor:
                 raise RuntimeError(self.last_error)
             _send_windows_hotkey("enter")
             self._task_view_active = False
+            logger.info("Task View window selected.")
             return
         self._switch_window()
 
