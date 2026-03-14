@@ -3109,3 +3109,719 @@ RuntimeError: No external app selected. Focus the app you want to control first.
 2026-02-23 10:28:01 | DEBUG | hand_gesture.controller | Frame 593: finger_count=0 finger_state=None mapped_action=None task_view_active=False
 2026-02-23 10:28:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
 2026-02-23 10:28:01 | DEBUG | hand_gesture.controller | Frame 594: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:47 | INFO | __main__ | Logging initialized. Log file: logs\hand_gesture.log
+2026-02-23 10:31:47 | INFO | hand_gesture.controller | Hand Gesture Recognition started. Press 'q' to quit.
+2026-02-23 10:31:48 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 1: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 2: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 3: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 4: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 5: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 6: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 7: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 8: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 9: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 10: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 11: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 12: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 13: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 14: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 15: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 16: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:48 | DEBUG | hand_gesture.controller | Frame 17: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 18: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 19: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 20: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 21: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 22: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 23: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 24: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 25: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 26: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 27: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 28: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 29: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 30: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 31: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 32: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 33: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 34: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 35: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 36: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 37: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 38: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 39: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:49 | DEBUG | hand_gesture.controller | Frame 40: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 41: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 42: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 43: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 44: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 45: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 46: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 47: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 48: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 49: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 50: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 51: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 52: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 53: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 54: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 55: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 56: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 57: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 58: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 59: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 60: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 61: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:50 | DEBUG | hand_gesture.controller | Frame 62: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 63: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 64: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 65: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 66: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 67: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 68: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 69: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 70: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 71: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 72: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 73: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 74: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 75: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 76: finger_count=1 finger_state=(1, 0, 0, 0, 0) mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 77: finger_count=1 finger_state=(1, 0, 0, 0, 0) mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 78: finger_count=1 finger_state=(1, 0, 0, 0, 0) mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 79: finger_count=2 finger_state=(1, 1, 0, 0, 0) mapped_action=None task_view_active=False
+2026-02-23 10:31:51 | DEBUG | hand_gesture.controller | Frame 80: finger_count=1 finger_state=(1, 0, 0, 0, 0) mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 81: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 82: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 83: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 84: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 85: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 86: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 87: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 88: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 89: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 90: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 91: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 92: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 93: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 94: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 95: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 96: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 97: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 98: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:52 | DEBUG | hand_gesture.controller | Frame 99: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 100: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 101: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 102: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 103: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 104: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 105: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 106: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 107: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 108: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 109: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 110: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 111: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 112: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 113: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 114: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 115: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 116: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 117: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 118: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 119: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 120: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 121: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:53 | DEBUG | hand_gesture.controller | Frame 122: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 123: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 124: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | New stability candidate: action=close_all_apps
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 125: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | New stability candidate: action=select_task_window
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 126: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Stability reset: previous_candidate=select_task_window
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 127: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 128: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 129: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 130: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 131: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 132: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:54 | DEBUG | hand_gesture.controller | Frame 133: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:54 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 134: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 135: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 136: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 137: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 138: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 139: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 140: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 141: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 142: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 143: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 144: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 145: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 146: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:55 | DEBUG | hand_gesture.controller | Frame 147: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:55 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 148: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 149: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 150: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 151: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 152: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 153: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 154: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 155: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 156: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 157: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 158: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 159: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 160: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 161: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:56 | DEBUG | hand_gesture.controller | Frame 162: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:56 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 163: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 164: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 165: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 166: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 167: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 168: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 169: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 170: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 171: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 172: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 173: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 174: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 175: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 176: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:57 | DEBUG | hand_gesture.controller | Frame 177: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 178: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 179: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 180: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 181: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 182: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 183: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 184: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 185: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 186: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 187: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 188: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 189: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:58 | DEBUG | hand_gesture.controller | Frame 190: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:58 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 191: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 192: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 193: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 194: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 195: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 196: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 197: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 198: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 199: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 200: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:31:59 | DEBUG | hand_gesture.controller | Frame 201: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:31:59 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 202: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 203: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | New stability candidate: action=close_current_app
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 204: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=2/8
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 205: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=3/8
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 206: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=4/8
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 207: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=5/8
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 208: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=6/8
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 209: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=7/8
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Frame 210: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:00 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=8/8
+2026-02-23 10:32:00 | INFO | hand_gesture.controller | Executing action: close_current_app
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Requested execute action: close_current_app
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Closing current app.
+2026-02-23 10:32:00 | DEBUG | hand_gesture.actions | Action execution completed: close_current_app
+2026-02-23 10:32:00 | INFO | hand_gesture.controller | Action executed successfully: close_current_app
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=131678
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 211: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | New stability candidate: action=close_current_app
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 212: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=2/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 213: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=3/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 214: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=4/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 215: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=5/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 216: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=6/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 217: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=7/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 218: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=8/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=1.23s
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 219: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=9/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=1.16s
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 220: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=10/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=1.08s
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 221: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=11/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=1.01s
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Frame 222: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=12/8
+2026-02-23 10:32:01 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.94s
+2026-02-23 10:32:01 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 223: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=13/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.85s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 224: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=14/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.77s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 225: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=15/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.70s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 226: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=16/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.61s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 227: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=17/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.52s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 228: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=18/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.44s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 229: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=19/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.35s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 230: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=20/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.26s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 231: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=21/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.18s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 232: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=22/8
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=close_current_app remaining=0.08s
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Frame 233: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:02 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=23/8
+2026-02-23 10:32:02 | INFO | hand_gesture.controller | Executing action: close_current_app
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Requested execute action: close_current_app
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Closing current app.
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Action execution completed: close_current_app
+2026-02-23 10:32:02 | INFO | hand_gesture.controller | Action executed successfully: close_current_app
+2026-02-23 10:32:02 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 234: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | New stability candidate: action=close_current_app
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 235: finger_count=5 finger_state=(1, 1, 1, 1, 1) mapped_action=close_current_app task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=close_current_app consecutive=2/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 236: finger_count=2 finger_state=(0, 0, 0, 1, 1) mapped_action=None task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability reset: previous_candidate=close_current_app
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 237: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | New stability candidate: action=select_task_window
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 238: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=2/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 239: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=3/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 240: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=4/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 241: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=5/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 242: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=6/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 243: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=7/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Frame 244: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=8/8
+2026-02-23 10:32:03 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=select_task_window remaining=0.98s
+2026-02-23 10:32:03 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 245: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=9/8
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=select_task_window remaining=0.88s
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 246: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=10/8
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=select_task_window remaining=0.79s
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 247: finger_count=0 finger_state=(0, 0, 0, 0, 0) mapped_action=select_task_window task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Stability tick: action=select_task_window consecutive=11/8
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Execution blocked by cooldown: action=select_task_window remaining=0.69s
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 248: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Stability reset: previous_candidate=select_task_window
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 249: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 250: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 251: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 252: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 253: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 254: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 255: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 256: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 257: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 258: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 259: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:04 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:04 | DEBUG | hand_gesture.controller | Frame 260: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 261: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 262: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 263: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 264: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 265: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 266: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 267: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 268: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 269: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 270: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 271: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 272: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 273: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 274: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 275: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 276: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 277: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:05 | DEBUG | hand_gesture.controller | Frame 278: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:05 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=394338
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 279: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 280: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 281: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 282: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 283: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 284: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 285: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 286: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 287: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 288: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 289: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 290: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 291: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 292: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 293: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 294: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 295: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:06 | DEBUG | hand_gesture.controller | Frame 296: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:06 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 297: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 298: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 299: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 300: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 301: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 302: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 303: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 304: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 305: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 306: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 307: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 308: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 309: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 310: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 311: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 312: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 313: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 314: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 315: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:07 | DEBUG | hand_gesture.controller | Frame 316: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:07 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 317: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 318: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 319: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 320: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 321: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 322: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 323: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 324: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 325: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 326: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 327: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 328: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 329: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 330: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=65758
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 331: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 332: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 333: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:08 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:08 | DEBUG | hand_gesture.controller | Frame 334: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 335: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 336: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 337: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 338: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 339: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 340: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 341: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 342: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 343: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 344: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 345: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:09 | DEBUG | hand_gesture.controller | Frame 346: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:09 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 347: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 348: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 349: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 350: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 351: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 352: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 353: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 354: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 355: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 356: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 357: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:10 | DEBUG | hand_gesture.controller | Frame 358: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:10 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:56 | INFO | __main__ | Logging initialized. Log file: logs\hand_gesture.log
+2026-02-23 10:32:56 | INFO | hand_gesture.controller | Hand Gesture Recognition started. Press 'q' to quit.
+2026-02-23 10:32:57 | DEBUG | hand_gesture.actions | Updated external target window: hwnd=196768
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 1: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 2: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 3: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 4: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 5: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 6: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 7: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 8: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 9: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 10: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 11: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 12: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 13: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 14: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 15: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:57 | DEBUG | hand_gesture.controller | Frame 16: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 17: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 18: finger_count=0 finger_state=None mapped_action=None task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 19: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | New stability candidate: action=close_all_apps
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 20: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=2/8
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 21: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=3/8
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 22: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=4/8
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 23: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=5/8
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 24: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=6/8
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 25: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=7/8
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Frame 26: finger_count=2 finger_state=(0, 1, 1, 0, 0) mapped_action=close_all_apps task_view_active=False
+2026-02-23 10:32:58 | DEBUG | hand_gesture.controller | Stability tick: action=close_all_apps consecutive=8/8
+2026-02-23 10:32:58 | INFO | hand_gesture.controller | Executing action: close_all_apps
+2026-02-23 10:32:58 | DEBUG | hand_gesture.actions | Requested execute action: close_all_apps
+2026-02-23 10:32:58 | INFO | hand_gesture.actions | Closing all apps sequence started: iterations=7
+2026-02-23 10:32:58 | DEBUG | hand_gesture.actions | Closing current app.
+2026-02-23 10:32:58 | DEBUG | hand_gesture.actions | Switching window.
