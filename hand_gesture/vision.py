@@ -32,6 +32,7 @@ class VisionEngine:
         image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
 
         hand_info: Optional[HandInfo] = None
+        best_score = float("-inf")
         if results.multi_hand_landmarks:
             for idx, hand_landmarks in enumerate(results.multi_hand_landmarks):
                 self._mp_drawing.draw_landmarks(
@@ -45,7 +46,10 @@ class VisionEngine:
                 if results.multi_handedness and len(results.multi_handedness) > idx:
                     hand_label = results.multi_handedness[idx].classification[0].label
 
-                hand_info = extract_hand_info(hand_landmarks, hand_label)
-                break
+                candidate = extract_hand_info(hand_landmarks, hand_label)
+                center_offset = abs(candidate.palm_center[0] - 0.5) + abs(candidate.palm_center[1] - 0.5)
+                score = candidate.bounding_box_area - (center_offset * 0.08)
+                if score > best_score:
+                    best_score = score
+                    hand_info = candidate
         return image, hand_info
-

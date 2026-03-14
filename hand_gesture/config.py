@@ -5,10 +5,14 @@ from dataclasses import dataclass
 class RuntimeConfig:
     camera_index: int = 0
     max_num_hands: int = 2
-    min_detection_confidence: float = 0.7
-    min_tracking_confidence: float = 0.7
-    consecutive_frames_required: int = 8
+    min_detection_confidence: float = 0.8
+    min_tracking_confidence: float = 0.8
+    consecutive_frames_required: int = 9
+    action_vote_window: int = 12
+    action_vote_ratio: float = 0.65
     action_cooldown_seconds: float = 2.0
+    hand_steady_delta: float = 0.02
+    steady_frames_required: int = 6
     close_all_iterations: int = 7
     close_all_step_delay_seconds: float = 0.2
     switch_nav_min_delta: float = 0.1

@@ -53,12 +53,16 @@ class DesktopActionExecutor:
             return False
 
         try:
-            if action == GestureAction.CLOSE_CURRENT_APP:
+            if action == GestureAction.CUT_TARGET_APP:
                 self._close_current_app()
             elif action == GestureAction.OPEN_TASK_VIEW:
                 self._open_task_view()
             elif action == GestureAction.SELECT_TASK_WINDOW:
                 self._select_task_view_window()
+            elif action == GestureAction.MINIMIZE_TARGET_APP:
+                self._minimize_current_app()
+            elif action == GestureAction.SHOW_DESKTOP:
+                self._show_desktop()
             elif action == GestureAction.CLOSE_ALL_APPS:
                 self._close_all_apps()
             else:
@@ -71,15 +75,44 @@ class DesktopActionExecutor:
             return False
 
     def _close_current_app(self) -> None:
-        logger.debug("Closing current app.")
+        logger.debug("Closing selected external app.")
         if self.os_name == "windows":
             if not self._close_last_external_window():
-                self.last_error = "No external app selected. Focus the app you want to control first."
+                self.last_error = "No external app selected. Focus another app first; this app protects itself."
                 raise RuntimeError(self.last_error)
         elif self.os_name == "darwin":
             pyautogui.hotkey("command", "q")
         else:
             pyautogui.hotkey("alt", "f4")
+
+    def _minimize_current_app(self) -> None:
+        logger.debug("Minimizing selected external app.")
+        if self.os_name == "windows":
+            if not self._minimize_last_external_window():
+                self.last_error = "No external app selected to minimize."
+                raise RuntimeError(self.last_error)
+            return
+        if pyautogui is None:
+            self.last_error = "pyautogui not installed. Run: pip install pyautogui"
+            raise RuntimeError(self.last_error)
+        if self.os_name == "darwin":
+            pyautogui.hotkey("command", "m")
+        else:
+            pyautogui.hotkey("alt", "space")
+            pyautogui.press("n")
+
+    def _show_desktop(self) -> None:
+        logger.debug("Showing desktop.")
+        if self.os_name == "windows":
+            _send_windows_hotkey("win", "d")
+            return
+        if pyautogui is None:
+            self.last_error = "pyautogui not installed. Run: pip install pyautogui"
+            raise RuntimeError(self.last_error)
+        if self.os_name == "darwin":
+            pyautogui.hotkey("fn", "f11")
+        else:
+            pyautogui.hotkey("winleft", "d")
 
     def _switch_window(self) -> None:
         logger.debug("Switching window.")
@@ -161,6 +194,15 @@ class DesktopActionExecutor:
         _send_windows_hotkey("alt", "f4")
         return True
 
+    def _minimize_last_external_window(self) -> bool:
+        hwnd = self._last_external_hwnd
+        if self.os_name != "windows" or hwnd is None:
+            return False
+        if not _is_window_alive(hwnd):
+            self._last_external_hwnd = None
+            return False
+        return _show_window(hwnd, _SW_MINIMIZE)
+
 
 _WINDOWS_VK = {
     "win": 0x5B,
@@ -172,9 +214,11 @@ _WINDOWS_VK = {
     "right": 0x27,
     "down": 0x28,
     "enter": 0x0D,
+    "d": 0x44,
 }
 _KEYEVENTF_KEYUP = 0x0002
 _SW_RESTORE = 9
+_SW_MINIMIZE = 6
 
 
 def _get_foreground_window() -> Optional[int]:
@@ -196,6 +240,10 @@ def _focus_window(hwnd: int) -> bool:
     user32 = ctypes.windll.user32
     user32.ShowWindow(ctypes.c_void_p(hwnd), _SW_RESTORE)
     return bool(user32.SetForegroundWindow(ctypes.c_void_p(hwnd)))
+
+
+def _show_window(hwnd: int, command: int) -> bool:
+    return bool(ctypes.windll.user32.ShowWindow(ctypes.c_void_p(hwnd), command))
 
 
 def _send_windows_hotkey(*keys: str) -> None:

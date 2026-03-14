@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 import time
+from collections import Counter, deque
 from typing import Optional
 
 import cv2
@@ -29,16 +30,48 @@ class GestureController:
             close_all_iterations=self.config.close_all_iterations,
             close_all_step_delay_seconds=self.config.close_all_step_delay_seconds,
         )
+        self.action_history: deque[Optional[GestureAction]] = deque(
+            maxlen=self.config.action_vote_window
+        )
         self.candidate_action: Optional[GestureAction] = None
         self.consecutive_count = 0
         self.last_action_time = 0.0
         self.status_text = "Ready"
         self.last_index_tip: Optional[tuple[float, float]] = None
+        self.last_palm_center: Optional[tuple[float, float]] = None
+        self.steady_frames = 0
         self.last_switch_nav_time = 0.0
         self.switch_motion_accum = (0.0, 0.0)
         self.frame_index = 0
 
+    def _update_hand_steadiness(self, hand_info) -> None:
+        if hand_info is None:
+            self.last_palm_center = None
+            self.steady_frames = 0
+            return
+
+        current_center = hand_info.palm_center
+        if self.last_palm_center is None:
+            self.last_palm_center = current_center
+            self.steady_frames = 1
+            return
+
+        dx = current_center[0] - self.last_palm_center[0]
+        dy = current_center[1] - self.last_palm_center[1]
+        if (dx * dx + dy * dy) ** 0.5 <= self.config.hand_steady_delta:
+            self.steady_frames += 1
+        else:
+            self.steady_frames = 0
+        self.last_palm_center = current_center
+
+    def _vote_ratio(self, action: GestureAction) -> float:
+        if not self.action_history:
+            return 0.0
+        matches = sum(1 for item in self.action_history if item == action)
+        return matches / len(self.action_history)
+
     def _update_stability(self, action: Optional[GestureAction]) -> None:
+        self.action_history.append(action)
         if action is None:
             if self.candidate_action is not None:
                 logger.debug("Stability reset: previous_candidate=%s", self.candidate_action.value)
@@ -48,10 +81,11 @@ class GestureController:
         if action == self.candidate_action:
             self.consecutive_count += 1
             logger.debug(
-                "Stability tick: action=%s consecutive=%d/%d",
+                "Stability tick: action=%s consecutive=%d/%d vote_ratio=%.2f",
                 action.value,
                 self.consecutive_count,
                 self.config.consecutive_frames_required,
+                self._vote_ratio(action),
             )
         else:
             self.candidate_action = action
@@ -64,6 +98,13 @@ class GestureController:
         now = time.time()
         cooldown_elapsed = now - self.last_action_time
         if self.consecutive_count < self.config.consecutive_frames_required:
+            return
+        vote_ratio = self._vote_ratio(self.candidate_action)
+        if vote_ratio < self.config.action_vote_ratio:
+            self.status_text = f"Stabilizing {vote_ratio:.0%}"
+            return
+        if self.steady_frames < self.config.steady_frames_required:
+            self.status_text = f"Hold still {self.steady_frames}/{self.config.steady_frames_required}"
             return
         cooldown_required = self.config.action_cooldown_seconds
         if (
@@ -175,13 +216,22 @@ class GestureController:
             self.executor.refresh_external_target()
             image, hand_info = self.vision.process_frame(frame)
             finger_count = hand_info.finger_count if hand_info else 0
-            action = map_action(hand_info.finger_state) if hand_info else None
+            action = map_action(hand_info) if hand_info else None
+            if self.executor.task_view_active and action not in {
+                GestureAction.OPEN_TASK_VIEW,
+                GestureAction.SELECT_TASK_WINDOW,
+            }:
+                action = None
+            self._update_hand_steadiness(hand_info)
+            vote_snapshot = Counter(item for item in self.action_history if item is not None)
             logger.debug(
-                "Frame %d: finger_count=%d finger_state=%s mapped_action=%s task_view_active=%s",
+                "Frame %d: finger_count=%d finger_state=%s mapped_action=%s steady_frames=%d vote_snapshot=%s task_view_active=%s",
                 self.frame_index,
                 finger_count,
                 hand_info.finger_state if hand_info else None,
                 action.value if action else None,
+                self.steady_frames,
+                {key.value: value for key, value in vote_snapshot.items()},
                 self.executor.task_view_active,
             )
 
@@ -197,7 +247,7 @@ class GestureController:
                 action_text=action_label(action),
                 stability_progress=self.consecutive_count,
                 stability_target=self.config.consecutive_frames_required,
-                status_text=self.status_text,
+                status_text=f"{self.status_text} | Steady {self.steady_frames}/{self.config.steady_frames_required}",
             )
 
             cv2.imshow("Hand Gesture Recognition", image)

@@ -10,7 +10,7 @@ def draw_overlay(
     stability_target: int,
     status_text: str,
 ):
-    cv2.rectangle(image, (0, 0), (480, 95), (0, 0, 0), -1)
+    cv2.rectangle(image, (0, 0), (540, 105), (15, 15, 15), -1)
     cv2.putText(
         image,
         f"Fingers: {finger_count}",
@@ -31,7 +31,7 @@ def draw_overlay(
     )
     cv2.putText(
         image,
-        f"Gesture Action: {action_text}",
+        f"Gesture: {action_text}",
         (10, 60),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.5,
@@ -41,10 +41,9 @@ def draw_overlay(
     cv2.putText(
         image,
         f"Stability: {stability_progress}/{stability_target} | {status_text}",
-        (10, 80),
+        (10, 84),
         cv2.FONT_HERSHEY_SIMPLEX,
-        0.5,
+        0.48,
         (200, 255, 200),
         1,
     )
-
