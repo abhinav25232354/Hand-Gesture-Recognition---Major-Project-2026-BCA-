@@ -10,6 +10,7 @@ FingerState = Tuple[int, int, int, int, int]
 
 
 class GestureAction(str, Enum):
+    CLOSE_CURRENT_APP = "close_current_app"
     CUT_TARGET_APP = "cut_target_app"
     OPEN_TASK_VIEW = "open_task_view"
     SELECT_TASK_WINDOW = "select_task_window"
@@ -102,6 +103,8 @@ def map_action(hand_info: HandInfo) -> Optional[GestureAction]:
     finger_state = hand_info.finger_state
     thumb, index, middle, ring, pinky = finger_state
 
+    if finger_state == (1, 1, 1, 1, 1):
+        return GestureAction.CLOSE_CURRENT_APP
     if index and middle and not ring and not pinky and hand_info.finger_spread >= 0.34:
         return GestureAction.CUT_TARGET_APP
     if not thumb and index and not middle and not ring and not pinky:
@@ -118,6 +121,8 @@ def map_action(hand_info: HandInfo) -> Optional[GestureAction]:
 
 
 def action_label(action: Optional[GestureAction]) -> str:
+    if action == GestureAction.CLOSE_CURRENT_APP:
+        return "Close Current App (Palm)"
     if action == GestureAction.CUT_TARGET_APP:
         return "Cut Target App (Scissors)"
     if action == GestureAction.OPEN_TASK_VIEW:

@@ -7,12 +7,13 @@ This project uses OpenCV + MediaPipe Hands for real-time hand detection and gest
 - Robust gesture recognition with hand steadiness checks, frame voting, and cooldowns
 - Safe external-app targeting so destructive gestures never close this app itself
 - Open Task View and navigate it with hand motion
-- Minimize an app, show desktop, or close multiple apps with dedicated gestures
+- Minimize an app, show desktop, close the current app with an open palm, or close multiple apps with dedicated gestures
 - Modular and scalable project structure
 - Visual mode tinting by gesture family
 
 ## Gesture Mapping
 
+- `Palm / open hand (all five fingers up)` -> Close the selected external app
 - `Scissors / V sign (index + middle spread apart)` -> Cut the selected external app
 - `Point (index only)` -> Open Task View
 - `Move pointing finger while Task View is open` -> Navigate left / right / up / down
@@ -24,6 +25,7 @@ This project uses OpenCV + MediaPipe Hands for real-time hand detection and gest
 Notes:
 - Gestures trigger only after they stay stable, win the recent frame vote, and the hand is physically steady.
 - The `cut` gesture only targets other apps. This app protects itself and will not close its own window.
+- The new `palm` close gesture follows the same safety rule and only targets other apps.
 - For best results, briefly focus the app you want to control before showing a gesture.
 - `Close multiple apps` is still best-effort and intentionally bounded by a fixed iteration limit.
 

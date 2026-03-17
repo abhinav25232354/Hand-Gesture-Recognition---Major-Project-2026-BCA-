@@ -53,7 +53,9 @@ class DesktopActionExecutor:
             return False
 
         try:
-            if action == GestureAction.CUT_TARGET_APP:
+            if action == GestureAction.CLOSE_CURRENT_APP:
+                self._close_current_app()
+            elif action == GestureAction.CUT_TARGET_APP:
                 self._close_current_app()
             elif action == GestureAction.OPEN_TASK_VIEW:
                 self._open_task_view()
