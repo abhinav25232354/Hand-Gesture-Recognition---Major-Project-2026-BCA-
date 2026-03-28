@@ -1,33 +1,42 @@
-﻿# Hand Gesture Recognition - BCA Major Project 2026
+# Hand Gesture Recognition - BCA Major Project 2026
 
-This project uses OpenCV + MediaPipe Hands for real-time hand detection and gesture-driven desktop control, with stronger temporal smoothing and safer desktop targeting.
+This project uses OpenCV + MediaPipe Hands for real-time hand detection and gesture-driven desktop control on Windows 11. The system is tuned for a smaller, more predictable gesture set so interaction feels smoother and easier to learn.
 
 ## Features
 
-- Robust gesture recognition with hand steadiness checks, frame voting, and cooldowns
-- Safe external-app targeting so destructive gestures never close this app itself
-- Open Task View and navigate it with hand motion
-- Minimize an app, show desktop, close the current app with an open palm, or close multiple apps with dedicated gestures
-- Modular and scalable project structure
-- Visual mode tinting by gesture family
+- Real-time webcam control at `640x480`
+- MediaPipe Hands with `static_image_mode=False`, `model_complexity=1`, and `max_num_hands=1`
+- Smoothed landmark tracking with multi-frame averaging
+- Gesture stability using hold time, cooldowns, and finite-state transitions
+- Mouse-free desktop interaction with `pyautogui`
+- Task View navigation using fingertip motion
+- On-screen overlays for status, gesture state, and finger positions
+- Fallback handling for low-confidence tracking and temporary hand loss
 
 ## Gesture Mapping
 
-- `Palm / open hand (all five fingers up)` -> Close the selected external app
-- `Scissors / V sign (index + middle spread apart)` -> Cut the selected external app
-- `Point (index only)` -> Open Task View
-- `Move pointing finger while Task View is open` -> Navigate left / right / up / down
-- `Fist` -> Select the highlighted window from Task View
-- `Three fingers (index + middle + ring)` -> Minimize the selected external app
-- `Thumbs up` -> Show desktop
-- `Rock sign (index + pinky)` -> Close multiple external apps in a bounded safe loop
+- `Open palm (hold)` -> Toggle desktop using `Win + D`
+  - If apps are visible, it shows the desktop.
+  - If the desktop is already visible, showing the palm again restores the previous windows.
+- `Index finger point (hold)` -> Open Task View using `Win + Tab`
+- `Move index finger while Task View is open` -> Navigate between apps and windows in Task View
+- `Make a fist while Task View is open` -> Open the selected app/window
+- `Index + middle finger together` -> Enable direct cursor control without opening Task View
+- `Keep using index + middle fingers` -> Move the cursor naturally on screen
+- `Open the third finger while cursor mode is active` -> Left click at the current cursor position
+- `V-sign (index + middle spread apart)` -> Close the current app using `Alt + F4`
 
-Notes:
-- Gestures trigger only after they stay stable, win the recent frame vote, and the hand is physically steady.
-- The `cut` gesture only targets other apps. This app protects itself and will not close its own window.
-- The new `palm` close gesture follows the same safety rule and only targets other apps.
-- For best results, briefly focus the app you want to control before showing a gesture.
-- `Close multiple apps` is still best-effort and intentionally bounded by a fixed iteration limit.
+## How It Works
+
+The system processes MediaPipe landmarks by:
+
+- Normalizing landmark coordinates to the frame
+- Detecting finger extension using joint-angle checks
+- Measuring finger spread to separate two-finger cursor mode from the V-sign
+- Detecting the third-finger extension as a click command during cursor mode
+- Averaging recent landmark frames to reduce jitter
+- Applying confidence thresholds and short hold times for reliable activation
+- Tracking fingertip movement to navigate Task View naturally
 
 ## Project Structure
 
@@ -61,15 +70,12 @@ python main.py
 
 Press `q` to quit.
 
-## Configuration
+## Notes
 
-Tune runtime behavior in `hand_gesture/config.py`:
-
-- `consecutive_frames_required`
-- `action_vote_window`
-- `action_vote_ratio`
-- `action_cooldown_seconds`
-- `hand_steady_delta`
-- `steady_frames_required`
-- `close_all_iterations`
-- `close_all_step_delay_seconds`
+- Use one hand at a time for the most stable tracking.
+- Keep lighting even and avoid strong backlight for better confidence.
+- Hold the palm, point, or V-sign briefly so the stabilizer can confirm the gesture.
+- Two fingers close together activate cursor mode.
+- Extending the third finger during cursor mode performs a click.
+- Two fingers spread apart act as the V-sign and close the active app.
+- The project is optimized for Windows 11 desktop control.
