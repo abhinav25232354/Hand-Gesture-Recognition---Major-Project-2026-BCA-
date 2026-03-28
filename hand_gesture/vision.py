@@ -11,8 +11,17 @@ from hand_gesture.gestures import HandInfo, extract_hand_info
 class VisionEngine:
     def __init__(self, max_num_hands: int, min_detection_confidence: float, min_tracking_confidence: float):
         self._mp_drawing = mp.solutions.drawing_utils
-        self._mp_drawing_styles = mp.solutions.drawing_styles
         self._mp_hands = mp.solutions.hands
+        self._hand_landmark_style = self._mp_drawing.DrawingSpec(
+            color=(255, 255, 255),
+            thickness=2,
+            circle_radius=2,
+        )
+        self._hand_connection_style = self._mp_drawing.DrawingSpec(
+            color=(255, 255, 255),
+            thickness=2,
+            circle_radius=2,
+        )
         self._hands = self._mp_hands.Hands(
             static_image_mode=False,
             max_num_hands=max_num_hands,
@@ -39,8 +48,8 @@ class VisionEngine:
                     image,
                     hand_landmarks,
                     self._mp_hands.HAND_CONNECTIONS,
-                    self._mp_drawing_styles.get_default_hand_landmarks_style(),
-                    self._mp_drawing_styles.get_default_hand_connections_style(),
+                    self._hand_landmark_style,
+                    self._hand_connection_style,
                 )
                 hand_label = None
                 if results.multi_handedness and len(results.multi_handedness) > idx:
