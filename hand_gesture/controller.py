@@ -205,6 +205,9 @@ class GestureController:
             self._cleanup()
             return
 
+        window_name = "Hand Gesture Recognition"
+        cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+        cv2.setWindowProperty(window_name, cv2.WND_PROP_ASPECT_RATIO, cv2.WINDOW_FREERATIO)
         logger.info("Hand Gesture Recognition started. Press 'q' to quit.")
         while self.cap.isOpened():
             ok, frame = self.cap.read()
@@ -250,7 +253,14 @@ class GestureController:
                 status_text=f"{self.status_text} | Steady {self.steady_frames}/{self.config.steady_frames_required}",
             )
 
-            cv2.imshow("Hand Gesture Recognition", image)
+            display_image = image
+            try:
+                _, _, win_w, win_h = cv2.getWindowImageRect(window_name)
+                if win_w > 0 and win_h > 0:
+                    display_image = cv2.resize(image, (win_w, win_h))
+            except cv2.error:
+                pass
+            cv2.imshow(window_name, display_image)
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 logger.info("Quit requested via keyboard.")
                 break
