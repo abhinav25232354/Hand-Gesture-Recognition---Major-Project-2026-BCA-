@@ -552,6 +552,9 @@ class GestureController:
             print("Error: could not open webcam.")
             return
 
+        window_name = "Hand Gesture Recognition and Action Control System"
+        cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+        cv2.setWindowProperty(window_name, cv2.WND_PROP_ASPECT_RATIO, cv2.WINDOW_FREERATIO)
         prev_time = time.time()
         fps = 0.0
         try:
@@ -565,7 +568,7 @@ class GestureController:
                     continue
 
                 frame = cv2.flip(frame, 1)
-                frame = cv2.resize(frame, (self.frame_width, self.frame_height))
+                self.frame_height, self.frame_width = frame.shape[:2]
                 now = time.time()
                 dt = max(now - prev_time, 1e-6)
                 fps = 0.9 * fps + 0.1 * (1.0 / dt) if fps else (1.0 / dt)
@@ -637,7 +640,14 @@ class GestureController:
                     2,
                 )
                 self.draw_overlay(frame, sample, fps)
-                cv2.imshow("Hand Gesture Recognition and Action Control", frame)
+                display_frame = frame
+                try:
+                    _, _, win_w, win_h = cv2.getWindowImageRect(window_name)
+                    if win_w > 0 and win_h > 0:
+                        display_frame = cv2.resize(frame, (win_w, win_h))
+                except cv2.error:
+                    pass
+                cv2.imshow(window_name, display_frame)
 
                 key = cv2.waitKey(1) & 0xFF
                 if key == ord("q"):
