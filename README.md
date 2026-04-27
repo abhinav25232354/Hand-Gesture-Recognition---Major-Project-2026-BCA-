@@ -1,4 +1,4 @@
-# Hand Gesture Recognition & Action Control System - BCA Major Project 2026
+# Hand Gesture Recognition & Action Control System - BCA Major Project 2026 (Finished)
 
 This project uses OpenCV + MediaPipe Hands for real-time hand detection and gesture-driven desktop control on Windows 11. The system is tuned for a smaller, more predictable gesture set so interaction feels smoother and easier to learn.
 
